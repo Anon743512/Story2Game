@@ -1,0 +1,93 @@
+{
+    "game_logics": {
+      "Traverse mountains to rescue a trapped baby dragon.": {
+        "item needed": ["has rope"],
+        "location": ["at mountains"],
+        "preceding_events": [],
+        "description": [],
+        "results": ["has baby dragon"]
+      },
+      "adventurer earn wings.": {
+        "item needed": [],
+        "location": ["at phoenix"],
+        "preceding_events": [],
+        "description": ["There is a reward for adventurers at the"],
+        "results": ["has wings"]
+      },
+      "Master the art of aerial combat against dangerous wyverns.": {
+        "item needed": ["has wings"],
+        "location": ["at flying school"],
+        "preceding_events": ["Traverse mountains to rescue a trapped baby dragon."],
+        "description": [],
+        "results": ["has combat mastery"]
+      },
+      "adventurer buy key.": {
+        "item needed": ["has money"],
+        "location": ["at key master shop"],
+        "preceding_events": [],
+        "description": ["There is a key for sale at a key master"],
+        "results": ["has key"]
+      },
+      "adventurer take sword.": {
+        "item needed": ["has key"],
+        "location": ["at weapon depot"],
+        "preceding_events": [],
+        "description": ["There is a sword at a weapon depot."],
+        "results": ["has sword"]
+      },
+      "Discover the hidden lair of a rogue phoenix and restore peace.": {
+        "item needed": ["has sword"],
+        "location": ["at hidden lair"],
+        "preceding_events": ["Master the art of aerial combat against dangerous wyverns."],
+        "description": [],
+        "results": ["has phoenix defeated"]
+      },
+      "Compete in a thrilling aerial race against skilled huntresses.": {
+        "item needed": ["has wings"],
+        "location": ["at sky"],
+        "preceding_events": ["Discover the hidden lair of a rogue phoenix and restore peace."],
+        "description": [],
+        "results": ["has race victory"]
+      },
+      "adventurer find pliers.": {
+        "item needed": [],
+        "location": ["at tool shed"],
+        "preceding_events": [],
+        "description": ["There is a set of pliers at the tool"],
+        "results": ["has pliers"]
+      },
+      "adventurer find parts.": {
+        "item needed": ["has pliers"],
+        "location": ["at junkyard"],
+        "preceding_events": [],
+        "description": ["There is a junkyard where adventurer can"],
+        "results": ["has parts"]
+      },
+      "adventurer build airship.": {
+        "item needed": ["has parts"],
+        "location": ["at workshop"],
+        "preceding_events": [],
+        "description": ["There is an airship being constructed at a work"],
+        "results": ["has airship"]
+      },
+      "Protect the realm from a massive aerial invasion led by a powerful sorcerer.": {
+        "item needed": ["has airship"],
+        "location": ["at sky"],
+        "preceding_events": ["Compete in a thrilling aerial race against skilled huntresses."],
+        "description": [],
+        "results": ["has realm saved"]
+      }
+    },
+    "map": {
+      "at mountains": [],
+      "at flying school": [],
+      "at phoenix": [{"type": "item", "content": "has wings"}],
+      "at hidden lair": [{"type": "npc", "content": "has phoenix"}],
+      "at weapon depot": [{"type": "item", "content": "has sword"}],
+      "at key master shop": [{"type": "item", "content": "has key"}, {"type": "npc", "content": "has merchant"}],
+      "at sky": [{"type": "npc", "content": "has other adventurers"}],
+      "at workshop": [{"type": "item", "content": "has airship"}],
+      "at junkyard": [{"type": "item", "content": "has parts"}],
+      "at tool shed": [{"type": "item", "content": "has pliers"}, {"type": "npc", "content": "has blacksmith"}]
+    }
+}
